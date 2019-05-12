@@ -1,22 +1,23 @@
 {
-    "manifest_version": 2,
-    "name": "Chrome Extension Sample",
-    "description": "This extension lets you manipulate the DOM",
-    "version": "1.0",
-    "homepage_url": "https://github.com/dvidsilva/chrome-ext-sample",
-    "browser_action": {
-        "default_icon": "favicon.png",
-        "default_popup": "popup.html",
-        "default_title": "StickerBlock"
-    },
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "all_frames": true,
-        "js":      ["scripts/content.js"]
-    }],
-    "permissions": [
-        "activeTab"
-    ],
-    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
-}
+	"manifest_version": 2,
 
+	"name": "StickerBlock",
+	"description": "Block the stickers in Naver blog!",
+	"version": "1.0",
+	"author": "RE-A",
+
+	"background": {
+		"scripts": ["popup.js"],
+		"persistent": true
+	},
+
+	"permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+	"browser_action": {
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	}
+}

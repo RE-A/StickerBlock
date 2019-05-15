@@ -1,11 +1,10 @@
 // send the page title as a chrome message
+// https://blog.naver.com/webhouse73/220496881108
+// https://blog.naver.com/ssyj963/221505966350
+
 var stickerArrayList = document.getElementsByClassName('se-sticker-image');
-var stickerText, sendingMeg;
-console.log(stickerArrayList);
-for(i=1 ; i<stickerArrayList.length; i++ ){         //  steickerArrayList[0] is unidentified.
-    stickerText += stickerArrayList[i].src;
-}
-sendingMeg = JSON.parse(JSON.stringify(stickerText));
+$(".se-sticker-image").hide()
+sendingMeg = JSON.parse(JSON.stringify(stickerArrayList.length));
 
 chrome.runtime.sendMessage(sendingMeg);
     

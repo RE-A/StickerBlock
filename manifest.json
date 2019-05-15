@@ -15,7 +15,12 @@
         "tabs",
         "http://*/",
         "https://*/"
-    ],
+	],
+	"content_scripts": [ {
+        "js": ["jquery.min.js", "payload.js"],
+        "matches": [ "http://*/*", "https://*/*" ]    
+    } ],
+	
 	"browser_action": {
 		"default_icon": "logo.png",
 		"default_popup": "popup.html"

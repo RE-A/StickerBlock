@@ -2,9 +2,10 @@
 	"manifest_version": 2,
 
 	"name": "StickerBlock",
+	"short_name": "STB",
 	"description": "Block the stickers in Naver blog!",
 	"version": "1.0",
-	"author": "RE-A",
+	"author": ["RE-A" , "yeomyeom"],
 
 	"background": {
 		"scripts": ["popup.js"],
@@ -22,7 +23,7 @@
     } ],
 	
 	"browser_action": {
-		"default_icon": "logo.png",
+		"default_icon": "StickerBlock.png",
 		"default_popup": "popup.html"
 	}
 }

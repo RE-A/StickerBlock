@@ -27,17 +27,18 @@ function hidestiker(){
     for(var i = 0 ; i<pics.length;i++ ){
         imgsrc = pics[i].src;
         if(re.exec(imgsrc)){
-            stickerNum++;
+            stickerNum += 1;
             pics[i].style.display='none';
         }
     }
 
     // sticker 클래스로 올라온 스티커를 제거하는 파트
-    var stickerArrayList = document.getElementsByClassName('se-sticker-image');
-    if(stickerArrayList.length > 0){
-        $(".se-sticker-image").hide()
-        stickerNum += stickerArrayList.length;
-    }
+    // 위 정규식으로 파싱하는 부분이랑 중복으로 계산되므로 제외함.
+    // var stickerArrayList = document.getElementsByClassName('se-sticker-image');
+    // if(stickerArrayList.length > 0){
+    //     $(".se-sticker-image").hide()
+    //     stickerNum += stickerArrayList.length;
+    // }
 
     if(stickerNum>0){
         sendingMeg = JSON.parse(JSON.stringify(stickerNum));

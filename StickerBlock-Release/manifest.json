@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 
-	"name": "StickerBlock - 네이버 블로그 스티커 차단 프로그램",
+	"name": "StickerBlock",
 	"short_name": "STB",
 	"description": "Block the stickers in Naver blog!",
 	"version": "1.0",
